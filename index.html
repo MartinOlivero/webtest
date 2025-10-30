@@ -1,318 +1,1183 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="La Pieza Digital | Asesor comercial especializado en marketing digital para abogados. Hacemos que tu estudio legal sea más visible, más rentable y más profesional." />
-  <title>La Pieza Digital | Asesor Comercial para Abogados</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CB360 - Del campo a la nube: inteligencia que transforma realidades</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='none' stroke='%23FFFFFF' stroke-width='2'/%3E%3Cpath d='M30 50 Q40 30 50 50 T70 50' stroke='%23FFFFFF' stroke-width='3' fill='none'/%3E%3Ctext x='50' y='70' text-anchor='middle' fill='%23FFFFFF' font-size='16' font-family='Arial'>360</text>%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Montserrat:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Fuente y librería de animaciones -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        :root {
+            --verde-biotech: #5BE37D;
+            --azul-profundo: #0D1B2A;
+            --cian-electrico: #00B2FF;
+            --dorado-suave: #F5C36D;
+            --gris-humo: #E3E8ED;
+            --pastel-verde: #B4F4C8;
+            --pastel-azul: #A8DAFF;
+            --pastel-dorado: #FFE7B8;
+        }
 
-  <style>
-    :root {
-      --celeste: #3ec3ff;
-      --gris-oscuro: #121212;
-      --gris-claro: #bfbfbf;
-      --blanco: #ffffff;
-    }
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--azul-profundo);
+            color: var(--gris-humo);
+            overflow-x: hidden;
+        }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+        }
 
-    body {
-      background-color: var(--gris-oscuro);
-      color: var(--blanco);
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
+        h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
 
-    /* ---------- HEADER ---------- */
-    header {
-      text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(180deg, rgba(18,18,18,0.95), rgba(18,18,18,0.85)), url('fondo.jpg') no-repeat center/cover;
-      position: relative;
-    }
+        /* Navegación */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(13, 27, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0, 178, 255, 0.2);
+        }
 
-    header h1 {
-      font-size: 2.5rem;
-      color: var(--celeste);
-      margin-bottom: 10px;
-      animation: fadeInDown 1.5s ease;
-    }
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
 
-    header p {
-      font-size: 1.1rem;
-      color: var(--gris-claro);
-      max-width: 700px;
-      margin: 0 auto 30px;
-      animation: fadeIn 2s ease;
-    }
+        .logo {
+            width: 80px;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(91, 227, 125, 0.5));
+            transition: all 0.3s ease;
+        }
 
-    @keyframes fadeInDown {
-      from {opacity: 0; transform: translateY(-20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
+        .logo:hover {
+            filter: drop-shadow(0 0 20px rgba(91, 227, 125, 0.8));
+            transform: scale(1.05);
+        }
 
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      background-color: var(--celeste);
-      color: var(--gris-oscuro);
-      font-weight: 600;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
+        .nav-links a {
+            color: var(--gris-humo);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
 
-    .btn:hover {
-      background-color: #1daae2;
-      transform: scale(1.05);
-      box-shadow: 0 0 10px var(--celeste);
-    }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--verde-biotech), var(--cian-electrico));
+            transition: width 0.3s ease;
+        }
 
-    /* ---------- SECCIONES ---------- */
-    section {
-      padding: 80px 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
 
-    h2 {
-      text-align: center;
-      color: var(--celeste);
-      margin-bottom: 40px;
-      font-size: 2rem;
-      position: relative;
-    }
+        .nav-links a:hover {
+            color: var(--verde-biotech);
+        }
 
-    h2::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: var(--celeste);
-      margin: 10px auto 0;
-      border-radius: 3px;
-    }
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
 
-    /* ---------- SERVICIOS ---------- */
-    .servicio {
-      background-color: #1c1c1c;
-      padding: 25px;
-      margin-bottom: 25px;
-      border-radius: 10px;
-      transition: all 0.4s ease;
-      border: 1px solid transparent;
-    }
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--verde-biotech);
+            transition: all 0.3s ease;
+        }
 
-    .servicio:hover {
-      background-color: #202020;
-      border-color: var(--celeste);
-      transform: translateY(-5px);
-      box-shadow: 0 4px 15px rgba(62,195,255,0.1);
-    }
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0D1B2A 0%, #00B2FF 50%, #5BE37D 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 0 2rem;
+        }
 
-    .servicio h3 {
-      color: var(--celeste);
-      margin-bottom: 10px;
-    }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(91, 227, 125, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 178, 255, 0.1) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
 
-    .servicio p {
-      color: var(--gris-claro);
-      font-size: 0.95rem;
-    }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
 
-    .precio {
-      margin-top: 10px;
-      font-weight: 700;
-      color: var(--celeste);
-    }
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+            max-width: 900px;
+        }
 
-    /* ---------- PROCESO ---------- */
-    .proceso li {
-      margin-bottom: 10px;
-      list-style: none;
-      color: var(--gris-claro);
-    }
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #5BE37D 0%, #00B2FF 50%, #F5C36D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 40px rgba(91, 227, 125, 0.3);
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            animation: fadeInUp 1s ease, glow 3s ease-in-out infinite;
+        }
 
-    /* ---------- TESTIMONIOS ---------- */
-    .testimonios blockquote {
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-left: 4px solid var(--celeste);
-      margin-bottom: 20px;
-      border-radius: 6px;
-      color: var(--gris-claro);
-      transition: transform 0.3s ease;
-    }
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(91, 227, 125, 0.5)); }
+            50% { filter: drop-shadow(0 0 40px rgba(0, 178, 255, 0.8)); }
+        }
 
-    .testimonios blockquote:hover {
-      transform: scale(1.02);
-      background-color: #222;
-    }
+        .hero .tagline {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--dorado-suave);
+            margin-bottom: 2rem;
+            font-weight: 600;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
 
-    /* ---------- CONTACTO ---------- */
-    .contacto form {
-      display: grid;
-      gap: 15px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
 
-    input, textarea {
-      padding: 12px;
-      border: none;
-      border-radius: 5px;
-      background-color: #2b2b2b;
-      color: var(--blanco);
-      font-size: 1rem;
-      transition: all 0.3s ease;
-    }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    input:focus, textarea:focus {
-      outline: 2px solid var(--celeste);
-      background-color: #333;
-    }
+        /* Botones 3D */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-    input::placeholder, textarea::placeholder {
-      color: var(--gris-claro);
-    }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--verde-biotech), var(--cian-electrico));
+            color: var(--azul-profundo);
+            box-shadow: 0 10px 30px rgba(91, 227, 125, 0.3);
+            animation: fadeInUp 1s ease 0.6s both;
+        }
 
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background-color: #0d0d0d;
-      color: var(--gris-claro);
-      font-size: 0.9rem;
-    }
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(91, 227, 125, 0.5);
+        }
 
-    footer img {
-      height: 60px;
-      margin-bottom: 10px;
-      transition: transform 0.4s ease;
-    }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--gris-humo);
+            border: 2px solid var(--dorado-suave);
+            box-shadow: 0 10px 30px rgba(245, 195, 109, 0.2);
+            margin-left: 1rem;
+            animation: fadeInUp 1s ease 0.7s both;
+        }
 
-    footer img:hover {
-      transform: scale(1.1);
-    }
+        .btn-secondary:hover {
+            background: var(--dorado-suave);
+            color: var(--azul-profundo);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(245, 195, 109, 0.4);
+        }
 
-    @media (max-width: 768px) {
-      header h1 { font-size: 2rem; }
-      h2 { font-size: 1.6rem; }
-    }
-  </style>
+        /* Secciones */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            text-align: center;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--verde-biotech), var(--cian-electrico));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--dorado-suave);
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Sobre Nosotros */
+        .about {
+            background: rgba(13, 27, 42, 0.5);
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(91, 227, 125, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(91, 227, 125, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--cian-electrico);
+            box-shadow: 0 20px 40px rgba(0, 178, 255, 0.2);
+        }
+
+        .about-card h3 {
+            color: var(--verde-biotech);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about-card p {
+            line-height: 1.8;
+            color: var(--gris-humo);
+        }
+
+        /* Unidades - Estilo expandido */
+        .units-container {
+            margin-top: 3rem;
+        }
+
+        .unit-full {
+            background: linear-gradient(135deg, rgba(13, 27, 42, 0.8), rgba(0, 178, 255, 0.05));
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border: 2px solid transparent;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .unit-full::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--verde-biotech), var(--cian-electrico));
+            transition: width 0.4s ease;
+        }
+
+        .unit-full:hover::before {
+            width: 100%;
+            opacity: 0.05;
+        }
+
+        .unit-full:hover {
+            transform: translateX(10px);
+            border-color: var(--verde-biotech);
+            box-shadow: 0 15px 50px rgba(91, 227, 125, 0.2);
+        }
+
+        .unit-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .unit-icon-large {
+            font-size: 4rem;
+            filter: drop-shadow(0 0 20px rgba(91, 227, 125, 0.5));
+        }
+
+        .unit-title {
+            flex: 1;
+        }
+
+        .unit-title h3 {
+            color: var(--cian-electrico);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .unit-title p {
+            color: var(--dorado-suave);
+            font-size: 1.1rem;
+        }
+
+        .unit-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .service-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--verde-biotech);
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
+            border-left-color: var(--cian-electrico);
+        }
+
+        .service-item i {
+            color: var(--verde-biotech);
+            margin-right: 0.5rem;
+        }
+
+        /* Servicios Generales */
+        .services-general {
+            background: rgba(13, 27, 42, 0.5);
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            margin-top: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(91, 227, 125, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-10px);
+            border-color: var(--cian-electrico);
+            box-shadow: 0 20px 40px rgba(0, 178, 255, 0.2);
+        }
+
+        .service-card h3 {
+            color: var(--dorado-suave);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .service-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--verde-biotech);
+            font-weight: bold;
+        }
+
+        /* Portfolio */
+        .portfolio {
+            background: rgba(13, 27, 42, 0.3);
+            border-radius: 20px;
+            padding: 4rem 2rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(91, 227, 125, 0.2);
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 178, 255, 0.3);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, rgba(91, 227, 125, 0.2), rgba(0, 178, 255, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .portfolio-content {
+            padding: 1.5rem;
+        }
+
+        .portfolio-content h3 {
+            color: var(--cian-electrico);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(13, 27, 42, 0.95);
+            padding: 3rem 2rem 1.5rem;
+            border-top: 2px solid rgba(91, 227, 125, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--verde-biotech);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-logo {
+            width: 100px;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 0 10px rgba(91, 227, 125, 0.3));
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--gris-humo);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: var(--verde-biotech);
+            transform: translateX(5px);
+        }
+
+        .contact-item i {
+            color: var(--cian-electrico);
+            font-size: 1.5rem;
+            width: 30px;
+        }
+
+        .contact-item a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(91, 227, 125, 0.1);
+            border-radius: 50%;
+            color: var(--verde-biotech);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .social-links a:hover {
+            background: var(--verde-biotech);
+            color: var(--azul-profundo);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(91, 227, 125, 0.4);
+            border-color: var(--cian-electrico);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(91, 227, 125, 0.2);
+            color: var(--gris-humo);
+        }
+
+        /* Pilares */
+        .pillars-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 2rem auto 0;
+        }
+
+        .pillar-badge {
+            background: rgba(91, 227, 125, 0.1);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            border: 2px solid var(--verde-biotech);
+            transition: all 0.3s ease;
+        }
+
+        .pillar-badge:nth-child(2n) {
+            background: rgba(0, 178, 255, 0.1);
+            border-color: var(--cian-electrico);
+        }
+
+        .pillar-badge:nth-child(3n) {
+            background: rgba(245, 195, 109, 0.1);
+            border-color: var(--dorado-suave);
+        }
+
+        .pillar-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(91, 227, 125, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                flex-direction: column;
+                background: rgba(13, 27, 42, 0.98);
+                width: 100%;
+                padding: 2rem;
+                transition: right 0.3s ease;
+                border-top: 1px solid rgba(91, 227, 125, 0.2);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .menu-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(8px, 8px);
+            }
+
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(8px, -8px);
+            }
+
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            .unit-services {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        /* Animación de scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Efectos de líneas luminosas */
+        .line-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.3;
+        }
+
+        .line {
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, var(--verde-biotech), transparent);
+            animation: moveLine 10s linear infinite;
+        }
+
+        .line:nth-child(1) { left: 20%; animation-delay: 0s; }
+        .line:nth-child(2) { left: 40%; animation-delay: 2s; }
+        .line:nth-child(3) { left: 60%; animation-delay: 4s; }
+        .line:nth-child(4) { left: 80%; animation-delay: 6s; }
+
+        @keyframes moveLine {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+    </style>
 </head>
-
 <body>
-  <!-- Header -->
-  <header>
-    <h1>Tu estudio legal, más visible, más rentable, más profesional.</h1>
-    <p>Soy tu asesor digital especializado en abogados. Te ayudo a posicionarte, atraer más clientes y convertir tus redes en una herramienta real de crecimiento comercial.</p>
-    <a href="#contacto" class="btn">Solicitá tu asesoría gratuita</a>
-    <a href="https://wa.me/XXXXXXXXXXX" target="_blank" class="btn">Hablar por WhatsApp</a>
-  </header>
-
-  <!-- Sobre mí -->
-  <section id="sobre" data-aos="fade-up">
-    <h2>Sobre mí</h2>
-    <p>No soy una agencia. Soy tu <strong>asesor comercial digital</strong>, un aliado que entiende cómo se vende un servicio jurídico y qué necesita un estudio para destacar. Trabajo junto a vos para diseñar estrategias que generen resultados medibles: más consultas, más casos y más presencia profesional.</p>
-  </section>
-
-  <!-- Servicios -->
-  <section id="servicios">
-    <h2 data-aos="fade-up">Servicios</h2>
-
-    <div class="servicio" data-aos="zoom-in">
-      <h3>Publicidad en Redes Sociales – Meta Ads</h3>
-      <p>Campañas estratégicas en Facebook e Instagram para atraer consultas reales y potenciales clientes interesados en tus servicios legales. Incluye segmentación, diseño, copywriting y seguimiento de resultados.</p>
-      <p class="precio">💵 Inversión mensual: $150.000</p>
+    <!-- Efectos de fondo -->
+    <div class="line-effect">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
     </div>
 
-    <div class="servicio" data-aos="zoom-in" data-aos-delay="100">
-      <h3>Community Management</h3>
-      <p>No se trata solo de publicar, sino de comunicar con intención. Creamos contenido que conecta con los problemas reales de tu público, posicionándote como la <strong>solución experta</strong> que están buscando.</p>
-      <p class="precio">💵 Inversión mensual: $200.000</p>
-    </div>
+    <!-- Navegación -->
+    <nav>
+        <div class="nav-container">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='90' fill='none' stroke='%23FFFFFF' stroke-width='3'/%3E%3Cpath d='M60 100 Q80 60 100 100 T140 100' stroke='%23FFFFFF' stroke-width='4' fill='none'/%3E%3Ctext x='100' y='135' text-anchor='middle' fill='%23FFFFFF' font-size='28' font-family='Orbitron, sans-serif'>360</text>%3C/svg%3E" alt="CB360 Logo" class="logo">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nos</a></li>
+                <li><a href="#unidades">Unidades</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-    <div class="servicio" data-aos="zoom-in" data-aos-delay="200">
-      <h3>Página Web Profesional</h3>
-      <p>Tu estudio jurídico necesita presencia online 24/7. Diseñamos sitios web modernos, rápidos y enfocados en convertir visitas en clientes.</p>
-      <p class="precio">💵 Costo único: $545.000</p>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>CB360</h1>
+            <p class="tagline">Del campo a la nube: IA que transforma realidades</p>
+            <p>Estrategia, IA y Marketing Integral para empresas que quieren crecer con propósito y visión de futuro</p>
+            <div>
+                <a href="#sobre-nosotros" class="btn btn-primary">Conoce Nuestra Historia</a>
+                <a href="#servicios" class="btn btn-secondary">Nuestros Servicios</a>
+            </div>
+        </div>
+    </section>
 
-    <div class="servicio" data-aos="zoom-in" data-aos-delay="300">
-      <h3>Asistente Virtual Inteligente (Chatbot)</h3>
-      <p>Un asistente digital programado según tu estilo y respuestas frecuentes. Atiende consultas, agenda reuniones y responde dudas 24/7 — sin descanso, sin errores, sin ausencias.</p>
-      <p class="precio">💵 Costo único: $350.000</p>
-    </div>
-  </section>
+    <!-- Sobre Nosotros -->
+    <section id="sobre-nosotros">
+        <div class="about">
+            <div class="about-content">
+                <h2 class="section-title">Sobre Nosotros</h2>
+                <p class="section-subtitle">Una historia de transformación, pasión y propósito</p>
+                
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; line-height: 1.8;">
+                    Soy Carolina Berón, tengo 29 años, soy mamá, emprendedora y soñadora. Desde siempre supe que quería algo más que un trabajo: quería construir algo propio, con propósito, que me permitiera crecer y también estar presente para mi hija. Hoy estoy construyendo ese sueño, paso a paso.
+                </p>
 
-  <!-- Proceso -->
-  <section id="proceso" data-aos="fade-up">
-    <h2>Cómo trabajamos</h2>
-    <ul class="proceso">
-      <li>1️⃣ Diagnóstico inicial de tu estudio o práctica profesional.</li>
-      <li>2️⃣ Diseño de estrategia personalizada.</li>
-      <li>3️⃣ Implementación de herramientas digitales.</li>
-      <li>4️⃣ Monitoreo y optimización constante.</li>
-    </ul>
-    <p style="margin-top:20px;">💬 Cada paso lo hacemos juntos. No soy tu community manager, soy tu socio estratégico en crecimiento.</p>
-  </section>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3>🌱 Del Campo a la Tecnología</h3>
+                        <p>Soy Técnica Forestal, Enfermera Veterinaria y Peluquera Canina. Pasé de las botas al teclado, del campo a la oficina, pero nunca dejé de estudiar. Me formé en datos, contabilidad, IA, marketing e ingeniería porque quiero estar preparada para lo que viene.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h3>💡 Misión</h3>
+                        <p>Trabajamos con pasión para que más personas vivan de lo que aman. Transformamos ideas en negocios sólidos, aplicando estrategia digital, IA y conocimiento multidisciplinario. Nuestro propósito es acompañarte en el camino al crecimiento real, conectando tu talento con las herramientas del futuro.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h3>🚀 Visión</h3>
+                        <p>Ser una empresa referente en Uruguay y Latinoamérica por nuestra capacidad de integrar tecnología, conocimientos y valores humanos para transformar ideas en marcas sostenibles, escalables y exitosas. Soñamos con una comunidad que crece con tecnología, conciencia y propósito.</p>
+                    </div>
+                </div>
 
-  <!-- Testimonios -->
-  <section id="testimonios" class="testimonios" data-aos="fade-up">
-    <h2>Testimonios</h2>
-    <blockquote>
-      “Gracias a La Pieza Digital, en menos de dos meses duplicamos las consultas a través de redes.”  
-      <br><strong>– Estudio Jurídico Ramírez & Asociados</strong>
-    </blockquote>
-    <blockquote>
-      “La web que nos desarrollaron no solo se ve profesional, sino que ahora nos contactan directamente desde Google.”  
-      <br><strong>– Dra. Fernández, abogada civil</strong>
-    </blockquote>
-  </section>
+                <div style="margin-top: 3rem; text-align: center;">
+                    <h3 style="color: var(--dorado-suave); margin-bottom: 2rem; font-size: 1.5rem;">Nuestros Pilares</h3>
+                    <div class="pillars-container">
+                        <div class="pillar-badge">✓ Compromiso con el crecimiento del cliente</div>
+                        <div class="pillar-badge">✓ Innovación constante</div>
+                        <div class="pillar-badge">✓ Conocimiento multidisciplinario</div>
+                        <div class="pillar-badge">✓ Tecnología al servicio de las personas</div>
+                        <div class="pillar-badge">✓ Crecimiento económico consciente</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contacto -->
-  <section id="contacto" class="contacto" data-aos="fade-up">
-    <h2>Contacto</h2>
-    <p style="text-align:center;">¿Listo para que tu estudio jurídico crezca con estrategia?</p>
-    <form>
-      <input type="text" placeholder="Nombre completo" required />
-      <input type="text" placeholder="Estudio jurídico" />
-      <input type="email" placeholder="Correo electrónico" required />
-      <input type="tel" placeholder="WhatsApp" />
-      <textarea rows="4" placeholder="Contame en qué puedo ayudarte..."></textarea>
-      <button type="submit" class="btn">Quiero mi asesoría gratuita</button>
-    </form>
-  </section>
+    <!-- Unidades -->
+    <section id="unidades">
+        <h2 class="section-title">Nuestras Unidades</h2>
+        <p class="section-subtitle">Cinco caminos. Un solo destino: tu crecimiento</p>
+        
+        <div class="units-container">
+            <!-- CB IA Tools -->
+            <div class="unit-full">
+                <div class="unit-header">
+                    <div class="unit-icon-large">🤖</div>
+                    <div class="unit-title">
+                        <h3>CB IA Tools</h3>
+                        <p>Automatización inteligente para tu negocio</p>
+                    </div>
+                </div>
+                <div class="unit-services">
+                    <div class="service-item">
+                        <i class="fas fa-robot"></i> Chatbots personalizados para empresas, veterinarias, comercios y municipios
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-comments"></i> Asistentes inteligentes integrados en WhatsApp, Instagram y sitios web
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-project-diagram"></i> Flujos de automatización con IA (ventas, atención, reservas, educación)
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-plug"></i> Integraciones con ManyChat, Tally, Notion, Meta y Google Workspace
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-magic"></i> Automatización de respuestas con IA
+                    </div>
+                </div>
+            </div>
 
-  <!-- Footer -->
-  <footer>
-    <img src="logo-blanco.png" alt="La Pieza Digital" />
-    <p>Asesoría comercial y marketing estratégico para abogados.</p>
-    <p>© 2025 La Pieza Digital | Todos los derechos reservados.</p>
-  </footer>
+            <!-- CB Data Lab -->
+            <div class="unit-full">
+                <div class="unit-header">
+                    <div class="unit-icon-large">📊</div>
+                    <div class="unit-title">
+                        <h3>CB Data Lab</h3>
+                        <p>Decisiones inteligentes basadas en datos</p>
+                    </div>
+                </div>
+                <div class="unit-services">
+                    <div class="service-item">
+                        <i class="fas fa-chart-line"></i> Análisis de datos y métricas de redes sociales y campañas
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-dashboard"></i> Dashboards inteligentes (Google Looker Studio, Notion, Sheets)
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-bullseye"></i> Estrategia basada en datos: performance, segmentación y optimización
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-brain"></i> Consultoría en IA aplicada al análisis predictivo y comportamiento del usuario
+                    </div>
+                </div>
+            </div>
 
-  <!-- Scripts de animación -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1200,
-      once: true
-    });
-  </script>
+            <!-- CB Digital Pro -->
+            <div class="unit-full">
+                <div class="unit-header">
+                    <div class="unit-icon-large">🎓</div>
+                    <div class="unit-title">
+                        <h3>CB Digital Pro</h3>
+                        <p>Formación y Mentoring en Marketing e IA</p>
+                    </div>
+                </div>
+                <div class="unit-services">
+                    <div class="service-item">
+                        <i class="fas fa-graduation-cap"></i> Cursos, talleres y mentorías en marketing digital e inteligencia artificial
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-book"></i> Mini cursos prácticos ("Tu primer embudo con IA", "Agenda magnética", etc.)
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-user-tie"></i> Asesorías express personalizadas y acompañamiento uno a uno
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-school"></i> Formación para instituciones educativas, emprendedores y pymes
+                    </div>
+                </div>
+            </div>
+
+            <!-- CB Vet Marketing -->
+            <div class="unit-full">
+                <div class="unit-header">
+                    <div class="unit-icon-large">🐾</div>
+                    <div class="unit-title">
+                        <h3>CB Vet Marketing</h3>
+                        <p>Marketing especializado para el sector veterinario</p>
+                    </div>
+                </div>
+                <div class="unit-services">
+                    <div class="service-item">
+                        <i class="fas fa-heartbeat"></i> Marketing veterinario especializado: identidad, fidelización y automatización
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-calendar-check"></i> Chatbots para turnos, recordatorios y venta de productos veterinarios
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-stethoscope"></i> Contenido y estrategia adaptados al lenguaje profesional del sector
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-file-medical"></i> Diseño de fichas técnicas
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-lightbulb"></i> Contenido educativo y de valor
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-map-marked-alt"></i> Asesoramiento de marketing territorial
+                    </div>
+                </div>
+            </div>
+
+            <!-- CB Agroforestal -->
+            <div class="unit-full">
+                <div class="unit-header">
+                    <div class="unit-icon-large">🌾</div>
+                    <div class="unit-title">
+                        <h3>CB Agroforestal Marketing</h3>
+                        <p>Campo, ciencia y conexión digital</p>
+                    </div>
+                </div>
+                <div class="unit-services">
+                    <div class="service-item">
+                        <i class="fas fa-file-alt"></i> Diseño de fichas técnicas
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-leaf"></i> Contenido educativo y de valor
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-tractor"></i> Marketing agropecuario y forestal con enfoque tecnológico
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-wifi"></i> Estrategias de comunicación y digitalización rural
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-seedling"></i> Branding y posicionamiento para empresas del agro, forestales y cooperativas
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-tree"></i> Aplicaciones de IA y datos en sostenibilidad, trazabilidad y productividad
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-handshake"></i> Asesoramiento profesional
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Generales -->
+    <section id="servicios">
+        <div class="services-general">
+            <h2 class="section-title">Servicios Generales CB360</h2>
+            <p class="section-subtitle">Estrategia, IA y Marketing Integral</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🎯 Consultoría Estratégica Digital 360°</h3>
+                    <ul>
+                        <li>Diagnóstico completo de tu marca</li>
+                        <li>Planificación estratégica personalizada</li>
+                        <li>Acompañamiento integral para potenciar tu empresa</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>🤖 Implementación de Inteligencia Artificial</h3>
+                    <ul>
+                        <li>Automatización de procesos</li>
+                        <li>Chatbots y asistentes virtuales</li>
+                        <li>Flujos IA personalizados</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>📈 Marketing y Embudos Automatizados</h3>
+                    <ul>
+                        <li>Creación de embudos de venta</li>
+                        <li>Captación de leads</li>
+                        <li>Automatización de mensajes con IA</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>📱 Gestión de Redes Sociales</h3>
+                    <ul>
+                        <li>Estrategia de contenido</li>
+                        <li>Branding profesional</li>
+                        <li>Calendario de publicaciones</li>
+                        <li>Optimización de presencia digital</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>🎨 Diseño Digital Profesional</h3>
+                    <ul>
+                        <li>Identidad visual completa</li>
+                        <li>Flyers y presentaciones</li>
+                        <li>Carruseles y e-books</li>
+                        <li>Mockups y piezas publicitarias</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>🌐 Branding y Desarrollo Web</h3>
+                    <ul>
+                        <li>Desarrollo web institucional</li>
+                        <li>Propuestas IA para municipios</li>
+                        <li>Estrategias para colegios y ONGs</li>
+                        <li>Diseño de materiales visuales</li>
+                        <li>Banners y QR interactivos</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3>📚 Productos Digitales</h3>
+                    <ul>
+                        <li>E-books y planners personalizados</li>
+                        <li>Guías y plantillas editables en Canva</li>
+                        <li>Recursos descargables</li>
+                        <li>Kits de contenido listos para usar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+        <div class="portfolio">
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-subtitle">Proyectos que transforman realidades</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">🚀</div>
+                    <div class="portfolio-content">
+                        <h3>Proyecto en Construcción</h3>
+                        <p>Pronto mostraremos casos de éxito y proyectos destacados</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">💼</div>
+                    <div class="portfolio-content">
+                        <h3>Proyecto en Construcción</h3>
+                        <p>Transformaciones digitales que marcan la diferencia</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">🌟</div>
+                    <div class="portfolio-content">
+                        <h3>Proyecto en Construcción</h3>
+                        <p>Innovación aplicada a negocios reales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='90' fill='none' stroke='%23FFFFFF' stroke-width='3'/%3E%3Cpath d='M60 100 Q80 60 100 100 T140 100' stroke='%23FFFFFF' stroke-width='4' fill='none'/%3E%3Ctext x='100' y='135' text-anchor='middle' fill='%23FFFFFF' font-size='28' font-family='Orbitron, sans-serif'>360</text>%3C/svg%3E" alt="CB360 Logo" class="footer-logo">
+                <p style="line-height: 1.8; max-width: 300px;">Del campo a la nube: inteligencia que transforma realidades.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:carolinaberon360@gmail.com">carolinaberon360@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+59898616124">098 616 124</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <a href="https://instagram.com/carolinaberon360" target="_blank">@carolinaberon360</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="mailto:carolinaberon360@gmail.com" title="Email" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/59898616124" target="_blank" title="WhatsApp" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://instagram.com/carolinaberon360" target="_blank" title="Instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 CB360 - Carolina Berón. Todos los derechos reservados.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--dorado-suave);">Tu crecimiento, Nuestra misión</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Cerrar menu al hacer click en un enlace
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Animación al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.unit-full, .service-card, .about-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
