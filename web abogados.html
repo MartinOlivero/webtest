@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="La Pieza Digital | Asesor comercial especializado en marketing digital para abogados. Hacemos que tu estudio legal sea más visible, más rentable y más profesional." />
+  <title>La Pieza Digital | Asesor Comercial para Abogados</title>
+
+  <!-- Fuente y librería de animaciones -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --celeste: #3ec3ff;
+      --gris-oscuro: #121212;
+      --gris-claro: #bfbfbf;
+      --blanco: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: var(--gris-oscuro);
+      color: var(--blanco);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(180deg, rgba(18,18,18,0.95), rgba(18,18,18,0.85)), url('fondo.jpg') no-repeat center/cover;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--celeste);
+      margin-bottom: 10px;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: var(--gris-claro);
+      max-width: 700px;
+      margin: 0 auto 30px;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      background-color: var(--celeste);
+      color: var(--gris-oscuro);
+      font-weight: 600;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #1daae2;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px var(--celeste);
+    }
+
+    /* ---------- SECCIONES ---------- */
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--celeste);
+      margin-bottom: 40px;
+      font-size: 2rem;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--celeste);
+      margin: 10px auto 0;
+      border-radius: 3px;
+    }
+
+    /* ---------- SERVICIOS ---------- */
+    .servicio {
+      background-color: #1c1c1c;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      transition: all 0.4s ease;
+      border: 1px solid transparent;
+    }
+
+    .servicio:hover {
+      background-color: #202020;
+      border-color: var(--celeste);
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(62,195,255,0.1);
+    }
+
+    .servicio h3 {
+      color: var(--celeste);
+      margin-bottom: 10px;
+    }
+
+    .servicio p {
+      color: var(--gris-claro);
+      font-size: 0.95rem;
+    }
+
+    .precio {
+      margin-top: 10px;
+      font-weight: 700;
+      color: var(--celeste);
+    }
+
+    /* ---------- PROCESO ---------- */
+    .proceso li {
+      margin-bottom: 10px;
+      list-style: none;
+      color: var(--gris-claro);
+    }
+
+    /* ---------- TESTIMONIOS ---------- */
+    .testimonios blockquote {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-left: 4px solid var(--celeste);
+      margin-bottom: 20px;
+      border-radius: 6px;
+      color: var(--gris-claro);
+      transition: transform 0.3s ease;
+    }
+
+    .testimonios blockquote:hover {
+      transform: scale(1.02);
+      background-color: #222;
+    }
+
+    /* ---------- CONTACTO ---------- */
+    .contacto form {
+      display: grid;
+      gap: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2b2b2b;
+      color: var(--blanco);
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      outline: 2px solid var(--celeste);
+      background-color: #333;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: var(--gris-claro);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #0d0d0d;
+      color: var(--gris-claro);
+      font-size: 0.9rem;
+    }
+
+    footer img {
+      height: 60px;
+      margin-bottom: 10px;
+      transition: transform 0.4s ease;
+    }
+
+    footer img:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      h2 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Tu estudio legal, más visible, más rentable, más profesional.</h1>
+    <p>Soy tu asesor digital especializado en abogados. Te ayudo a posicionarte, atraer más clientes y convertir tus redes en una herramienta real de crecimiento comercial.</p>
+    <a href="#contacto" class="btn">Solicitá tu asesoría gratuita</a>
+    <a href="https://wa.me/XXXXXXXXXXX" target="_blank" class="btn">Hablar por WhatsApp</a>
+  </header>
+
+  <!-- Sobre mí -->
+  <section id="sobre" data-aos="fade-up">
+    <h2>Sobre mí</h2>
+    <p>No soy una agencia. Soy tu <strong>asesor comercial digital</strong>, un aliado que entiende cómo se vende un servicio jurídico y qué necesita un estudio para destacar. Trabajo junto a vos para diseñar estrategias que generen resultados medibles: más consultas, más casos y más presencia profesional.</p>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios">
+    <h2 data-aos="fade-up">Servicios</h2>
+
+    <div class="servicio" data-aos="zoom-in">
+      <h3>Publicidad en Redes Sociales – Meta Ads</h3>
+      <p>Campañas estratégicas en Facebook e Instagram para atraer consultas reales y potenciales clientes interesados en tus servicios legales. Incluye segmentación, diseño, copywriting y seguimiento de resultados.</p>
+      <p class="precio">💵 Inversión mensual: $150.000</p>
+    </div>
+
+    <div class="servicio" data-aos="zoom-in" data-aos-delay="100">
+      <h3>Community Management</h3>
+      <p>No se trata solo de publicar, sino de comunicar con intención. Creamos contenido que conecta con los problemas reales de tu público, posicionándote como la <strong>solución experta</strong> que están buscando.</p>
+      <p class="precio">💵 Inversión mensual: $200.000</p>
+    </div>
+
+    <div class="servicio" data-aos="zoom-in" data-aos-delay="200">
+      <h3>Página Web Profesional</h3>
+      <p>Tu estudio jurídico necesita presencia online 24/7. Diseñamos sitios web modernos, rápidos y enfocados en convertir visitas en clientes.</p>
+      <p class="precio">💵 Costo único: $545.000</p>
+    </div>
+
+    <div class="servicio" data-aos="zoom-in" data-aos-delay="300">
+      <h3>Asistente Virtual Inteligente (Chatbot)</h3>
+      <p>Un asistente digital programado según tu estilo y respuestas frecuentes. Atiende consultas, agenda reuniones y responde dudas 24/7 — sin descanso, sin errores, sin ausencias.</p>
+      <p class="precio">💵 Costo único: $350.000</p>
+    </div>
+  </section>
+
+  <!-- Proceso -->
+  <section id="proceso" data-aos="fade-up">
+    <h2>Cómo trabajamos</h2>
+    <ul class="proceso">
+      <li>1️⃣ Diagnóstico inicial de tu estudio o práctica profesional.</li>
+      <li>2️⃣ Diseño de estrategia personalizada.</li>
+      <li>3️⃣ Implementación de herramientas digitales.</li>
+      <li>4️⃣ Monitoreo y optimización constante.</li>
+    </ul>
+    <p style="margin-top:20px;">💬 Cada paso lo hacemos juntos. No soy tu community manager, soy tu socio estratégico en crecimiento.</p>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios" class="testimonios" data-aos="fade-up">
+    <h2>Testimonios</h2>
+    <blockquote>
+      “Gracias a La Pieza Digital, en menos de dos meses duplicamos las consultas a través de redes.”  
+      <br><strong>– Estudio Jurídico Ramírez & Asociados</strong>
+    </blockquote>
+    <blockquote>
+      “La web que nos desarrollaron no solo se ve profesional, sino que ahora nos contactan directamente desde Google.”  
+      <br><strong>– Dra. Fernández, abogada civil</strong>
+    </blockquote>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contacto" data-aos="fade-up">
+    <h2>Contacto</h2>
+    <p style="text-align:center;">¿Listo para que tu estudio jurídico crezca con estrategia?</p>
+    <form>
+      <input type="text" placeholder="Nombre completo" required />
+      <input type="text" placeholder="Estudio jurídico" />
+      <input type="email" placeholder="Correo electrónico" required />
+      <input type="tel" placeholder="WhatsApp" />
+      <textarea rows="4" placeholder="Contame en qué puedo ayudarte..."></textarea>
+      <button type="submit" class="btn">Quiero mi asesoría gratuita</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <img src="logo-blanco.png" alt="La Pieza Digital" />
+    <p>Asesoría comercial y marketing estratégico para abogados.</p>
+    <p>© 2025 La Pieza Digital | Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts de animación -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  </script>
+</body>
+</html>
